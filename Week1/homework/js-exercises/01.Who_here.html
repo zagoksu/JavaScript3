@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+     <title>Who do we have here</title>
+     <style>
+        body {
+            text-align: center;
+            font-family: "Helvetica", sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #container {
+          width: 50%;
+            align-self: center;
+            height: 50%;
+        }
+        #message-box{
+          justify-content: center;
+          text-align: center;
+        }
+
+        li {
+            width: 70%;
+            margin: auto;
+            text-align:center ;
+        }
+
+        .box {
+            border-radius: 5px;
+            background-color: #eee;
+            padding: 20px 5px;
+        }
+        button {
+            color: white;
+            background-color: #4791d0;
+            border-radius: 5px;
+            border: 1px solid #4791d0;
+            padding: 5px 10px 8px 10px;
+        }
+        button:hover {
+            background-color: #0F5897;
+            border: 1px solid #0F5897;
+        }
+
+        @media  (max-width: 750px) {
+          #container{
+            width: 75%;
+            font-size: 0.8rem;
+          }
+
+          li{
+            width: 85%;
+          }
+        }
+     </style>
+  </head>
+  <body>
+    <div id="container">
+    <div class="box">
+        <h1>Random User Finder</h1>
+        <img id="user-image" src="" alt="">
+        <div id="message-box">
+            <ul style="list-style-type: none;">
+                <li id="name"></li>
+                <li id="age"></li>
+                <li id="city"></li>
+                <li id="email"></li>
+            </ul>
+          </div>
+    </div>
+<div class="box">
+  <button id="get-user-ajax">
+    Get Random User <br> with AJAX
+  </button>
+  <button id="get-user-axios">
+    Get Random User <br> with AXIOS
+  </button>
+</div>
+</div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="01.Who_do_we_have_here.js"></script>
+  </body>
+</html>
