@@ -20,6 +20,17 @@
      */
     render(contributors) {
       // TODO: replace this comment and the console.log with your own code
+      this.container.innerHTML = '';
+      contributors.forEach((data) => {
+        const ul = createAndAppend('ul', this.container)
+        const li = createAndAppend('li', ul);
+        const img = createAndAppend('img', li, {src: data.avatar_url});
+        const link = createAndAppend('a', li, {
+            text: data.login,
+            href: data.html_url
+        });
+        const span = createAndAppend('span', li, {text: data.contributions});
+    });
       console.log('ContributorsView', contributors);
     }
   }
